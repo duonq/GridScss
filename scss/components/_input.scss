@@ -1,0 +1,18 @@
+@import '../colors';
+
+input{
+    width: 270px;
+    padding: 8px 56px 8px 16px;
+    font-family: Inter;
+    font-size: 18px;
+    line-height: 32px;
+    border: none;
+    outline: none;
+    border-radius: 16px;
+    background: #f0f0f0;
+
+    &:hover{
+        border: 2px solid #dcd8f9;
+    }
+}
+

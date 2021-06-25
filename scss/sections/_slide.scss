@@ -1,0 +1,413 @@
+@import '../colors';
+@import '../setting';
+
+#slide{
+    @include td__inner;
+}
+.slide{
+    
+    &__title{
+        text-align: center !important;
+        &--size-big{
+            @include size(96px, 104px, -3px);
+            @include atriTypeBold(Inter, 800);
+        }
+        &--color-red{
+            color: $colorRed;
+            text-shadow: $text-shadow--white;
+        }
+        &--size-m{
+            @include size(64px, 77px, -1px);
+            @include atriTypeBold(Inter, 900);
+        }
+        &-pos{
+            @include positon-abs(60px, 0, 80px, 0);
+        }
+        .text-cool{
+            display: none;
+        }
+
+        &-mobi{
+            display: none;
+        }
+    }
+    &__image--green{
+        background: $colorGreenLight;
+        @include widthHeight(191px, 51px);
+        margin: 0 auto;
+        border-radius: 999px;
+    }
+    
+
+    &-images{
+        display: flex;
+        justify-content: space-between;
+        margin-top: 64px;
+        &-left{
+            @include dis-cell;
+            width: 270px;
+        }
+
+        &__title{
+            @include atriTypeBold(Inter, 400);
+            @include size(18px, 32px, normal);
+        }
+        &--pos{
+            width: 100%;
+            margin-top: 16px;
+            top: 0;
+            
+
+            p{
+                @include size(18px, 32px, 0.2px);
+                @include atriTypeBold(Inter, 700);
+                color: $colorWhite;
+                margin-top: 32px
+            }
+            span{
+                @include size(14px, 24px, 0.25px);
+                @include atriTypeBold(Inter, 400);
+            }
+        }
+        &-right{
+            @include dis-cell;
+            padding-left: 30px;
+
+            &__man{
+                @include dis-cell;
+            }
+
+            &--pos{
+                width: 100%;
+                margin-bottom: 16px;
+                bottom: 0;
+            }
+
+            &__title{
+                @include size(48px, 56px, -1px);
+                text-shadow: $text-shadow--black;
+                @include atriTypeBold;
+                color:  $colorWhite;
+                text-align: center;
+            }
+        }
+        
+        &__text{
+            @include dis-cell;
+            padding-left: 30px;
+            padding-top: 80px;
+
+            &-pair{
+                @include size(18px, 32px, normal);
+                @include atriTypeBold(Inter, normal);
+                margin-bottom: 0;
+                @include widthHeight(370px, 78px);
+                // height: 78px !important;
+            }
+        }
+
+        &__under{
+            margin-top: 30px;
+            @include dis-cell;
+        }
+
+        &--pos-woman{
+            width: 100%;
+            margin-top: 16px;
+            top: 0;
+            padding-top: 30px
+        }
+    }
+}
+
+.image__frame,.image__woman,.image__book,.image__shoe,.image__textA{
+    @include dis-cell;
+}
+.image__frame,.image__woman,.image__shoe{
+    padding-left: 30px;
+}
+
+.image__frame, .image__woman,.image__book{
+    padding-top: 30px;
+}
+
+.icon-arow-mobi{
+    display: none;
+}
+
+@media screen and (min-width: 1440px){
+    .text-cool{
+        display: none;
+    }
+    .slide__title-mobi{
+        display: none;
+    }
+
+    .icon-arow-mobi{
+        display: none;
+    }
+    .slide-images-mobi{
+        display: none;
+    }
+    
+}
+@media screen and (min-width: 768px) and (max-width: 1440px){
+    .slide-images-mobi{
+        display: none;
+    }
+}
+
+@media screen and (min-width: 361px) and (max-width: 768px){
+    #slide{
+        margin: auto;
+    }
+
+    .slide{
+
+        &-images{
+            margin: auto 95px;
+        }
+        &__title--size-big{
+            @include size(64px, 68px, -1px);
+
+        }
+
+        &__title--size-m{
+            @include size(50px, 68px, -1px);
+
+        }
+        &__image--green{
+            @include widthHeight(126px, 38px);
+        }
+        &__title-pos{
+            @include positon-abs(42px, 0, 50px, 0);
+        }
+    }
+    .slide-images-mobi{
+        display: none;
+    }
+
+}
+
+@media screen and (max-width: 360px){
+    #slide{
+        margin: 0 15px;
+    }
+    .slide{
+        &-images{
+            display: none;
+        }
+
+        &__title--size-big{
+            @include size(64px, 78px, -1px);
+            @include atriTypeBold(Inter, 900);
+            
+            span{
+                @include size(48px, 56px, -1px);
+            }
+        }
+
+        .text-cool{
+            display: inline-block;
+        }
+        .text-fine{
+            display: none;
+        }
+
+        &__image--green{
+            @include widthHeight(119px, 32px);
+            float: left;
+        }
+
+        &__title-pos{
+            @include positon-abs(129px, 0, 16px, 0);
+        }
+
+        &__title--size-m{
+            display: none;
+        }
+        
+        &__title-mobi{
+            display: inline-block;
+            @include size(24px, 36px, 0.25px);
+            @include atriTypeBold;
+            margin-bottom: 0;
+            margin-top: 16px;
+        }
+    }
+
+    .icon-arow-mobi{
+        display: block;
+        @include widthHeight(64px, 64px);
+        margin: 0 auto;
+        line-height: 64px;
+        text-align: center;
+        font-size: 22px;
+        background: rgba(255, 255, 255, 0.24);
+        color: $colorPurple;
+        margin-top: 8px;
+        border-radius: 50%;
+
+        &:hover{
+            cursor: pointer;
+            border: 1px solid $colorPurple;
+        }
+    }
+
+    .slide-images-mobi{
+        margin: 0 -15px;
+        display: flex;
+
+        .slide-images-left{
+            width: auto;
+
+            .image__slip{
+                margin-top: 81px;
+            }
+
+            .image__vase{
+                margin-top: 15px;
+            }
+        }
+
+        .slide-images-right{
+            padding-left: 15px;
+
+            .image-above{
+                margin-top: 24px;
+            }
+            .image__man{
+                width: 224px;
+                height: 183px;
+            }
+
+            .image__clock{
+                margin-top: 76px;
+            }
+
+            .rainbow,
+            .image__clock{
+                margin-left: 15px;
+            }
+
+            .image__math,
+            .image-under{
+                margin-top: 15px;
+            }
+        }
+
+        .positon-abs-slip{
+            @include positon-abs(0, 0, 0, 0);
+            z-index: 1;
+            color: $colorWhite;
+
+            p{
+                text-align: center;
+                width: 114px;
+                margin-left: -71px;
+                @include size(10px, 14px, 0.2px);
+                margin-top: 8px;
+                @include atriTypeBold;
+            }
+            span{
+                font-weight: normal;
+                @include size(9px, 14px, 0.2px);
+            }
+        }
+
+
+        .type{
+            @include atriTypeBold;
+            text-align: center;
+            padding-top: 8px;
+        }
+        .positon-abs-vase{
+            bottom: 0;
+            
+            p{
+                @extend .type;
+                width: 82px;
+                margin-left: -27px;
+                margin-bottom: 0;
+                @include size(9px, 14px, 0.2px);
+            }
+        }
+        .positon-abs-man{
+            top: 0;
+
+            p{
+                @extend .type;
+                width: 224px;
+                @include size(23px, 31px, 0.2px);
+                color: $colorWhite;
+            }
+        }
+
+        .positon-abs-clock{
+            top: 0;
+
+            p{
+                @extend .type;
+                width: 84px;
+                color: $colorBlack;
+                @include size(9px, 14px, 0.2px);
+            }
+        }
+
+        .positon-abs-flower{
+            bottom: 0;
+
+            p{
+                width: 130px;
+                @extend .type;
+                @include size(13px, 14px, 0.2px);
+                margin-bottom: 8px;
+                font-weight: normal;
+            }
+        }
+        .positon-abs-math{
+            bottom: 0;
+
+            p{
+                @extend .type;
+                @include size(25px, 26px, -1px);
+                width: 130px;
+                
+            }
+        }
+
+        .positon-abs-rainbow{
+            bottom: 51px;
+
+            p{
+                width: 179px;
+                margin-right: -29px;
+                @extend .type;
+                @include size(23px, 27px, -1px);
+                color: #fff;
+                text-shadow: 0px 12px 12px rgba(28, 65, 84, 0.1), 0px 24px 24px rgba(28, 65, 84, 0.08), 0px 64px 48px rgba(28, 65, 84, 0.08), 0px 64px 64px rgba(28, 65, 84, 0.04);
+            }
+        }
+
+        .positon-abs-rain{
+            bottom: 0;
+
+            p{
+                width: 179px;
+                margin-right: -29px;
+                @extend .type; 
+                @include size(9px, 22px, 0.2px);
+                margin-bottom: 0;
+            }
+        }
+
+
+        .button-design{
+            border-radius: 999px;
+            margin-top: 15px !important;
+            @include size(14px, 24px, 0.2px);
+            @include widthHeight(130px, 37px !important);
+        }
+    }
+      
+}

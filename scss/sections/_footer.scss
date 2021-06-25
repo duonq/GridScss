@@ -1,0 +1,196 @@
+@import '../colors';
+@import '../components/button';
+@import '../components/input';
+
+.footer{
+    @include td__inner;
+}
+.follow{
+    &__name{
+        @include atriTypeBold;
+        @include size(12px, 24px, 2.5px);
+        text-transform: uppercase;
+        color: $colorGrayLight;
+        margin-top: 40px;
+    }
+
+    &__icon{
+        margin-top: 8px;
+        a{
+            margin-right: 37px;
+            border-radius: 50% !important;
+        }
+    }
+
+    &__email{
+        @include size(32px, 48px, -0.5px);
+        margin-top: 0;
+        color: $colorPurple;
+        @include atriTypeBold;
+        margin-bottom: 0;
+    }
+
+    &__list-colum{
+        ul{
+            list-style-type: none;
+            padding-left: 0;
+
+            li{
+                margin-top: 16px;
+            }
+
+            a{
+                text-decoration: none;
+                color: $colorBlack;
+
+                &:hover{
+                    cursor: pointer;
+                    border-bottom: 2px solid #6f9095;
+                }
+            }
+        }
+    }
+}
+
+.inputWidthIcon{
+    @include widthHeight(270px, 48px);
+    margin-top: 16px;
+
+    &--mess{
+        @include widthHeight(370px, 80px);
+        margin-top: 30px;
+    }
+}
+
+textarea {
+    @include widthHeight(370px, 80px);
+    @extend input;
+    color: $colorPurple;
+}
+.positon-abs{
+    @include positon-abs(0, 0, auto ,5px);
+    line-height: 43px;
+    z-index: 1;
+}
+
+
+
+
+@media screen and (min-width: 768px) and (max-width: 1440px){
+    #footer-mobi{
+        display: none;
+    }
+}
+
+@media screen and (min-width: 1440px){
+    #footer-mobi{
+        display: none;
+    }
+}
+
+@media screen and (min-width: 361px) and (max-width: 768px){
+    .footer{
+        margin: auto;
+        padding: 0;
+    }
+    .col-md-6{
+        width: 100%;
+        text-align: center;
+    }
+    .d-flex{
+        justify-content: center;
+    }
+
+    .inputWidthIcon--mess,
+    .inputWidthIcon{
+        margin: 20px auto;
+        width: 670px;
+    }
+    
+    input{
+        width: 100% !important;
+        padding: 18px 66px 18px 18px;
+    }
+    .positon-abs{
+        line-height: 68px;
+    }
+
+    textarea{
+        min-height: 120px;
+    }
+    .button-footer{
+        width: 670px;
+    }
+
+    .follow__list-colum{
+        .row{
+            width: 60%;
+            margin: auto;
+
+            .col-md-4{
+                width: calc(100%/3) !important;
+                margin: auto;
+            }
+        }
+    }
+    #footer-mobi{
+        display: none;
+    }
+
+}
+
+
+@media screen and (max-width: 360px){
+    
+    #footer{
+        display: none;
+    }
+
+    #footer-mobi{
+        display: block;
+        padding-top: 40px;
+        padding-bottom: 40px;
+    }
+
+    .footer-mobi{
+        &__title{
+            text-align: center;
+            @include size(14px, 24px, 0.2px);
+            @include atriTypeBold(Inter, 500);
+            margin-bottom: 0;
+    
+            &--color{
+                color: $colorGreen;
+                text-align: center;
+                @include size(12px, 22px, 0.3px);
+                margin-bottom: 0;
+            }
+    
+            &-email{
+                @include size(18px, 32px, 0.2px);
+                text-align: center;
+                color: $colorPurple;
+                @include atriTypeBold;
+                margin-bottom: 0;
+            }
+        }
+
+        &__follow-icon{
+            margin: 0 15px;
+            margin-top: 24px;
+            display: flex;
+            justify-content: space-between;
+
+            div{
+                @include widthHeight(40px, 40px);
+            }
+        }
+    }
+
+    .bg-rectangle, .bg-dots {
+        bottom: 0;
+    }
+    .bg-dots{
+        margin-left: 55px;
+    }
+}

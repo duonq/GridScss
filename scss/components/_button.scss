@@ -1,0 +1,95 @@
+@import '../setting';
+@import '../colors';
+
+.button{
+    border-radius: 16px;
+    // letter-spacing: 0.25px;
+    outline: none;
+    border: none;
+    transition: .2s ease;
+    cursor: pointer;
+    color: $colorWhite;
+    @include atriTypeBold;
+}
+
+.button-header{
+
+    @include size(24px, 36px, normal);
+    @include widthHeight(170px, 64px);
+    border-radius: 999px;
+    text-shadow: 0px 2px 4px rgb(38 50 56 / 16%), 0px 4px 8px rgb(38 50 56 / 8%);
+    &:hover{
+        cursor: pointer;
+        color: $colorBlack;
+        opacity: 0.85;
+    }
+}
+
+.button-slide{
+    @include widthHeight(270px, 82px);
+    border-radius: 999px;
+    @include size(32px, 48px, -0.5px);
+    background: $colorPurple;
+    margin-top: 30px;
+    &:hover{
+        cursor: pointer;
+        color: $colorBlack;
+        opacity: 0.85;
+    }
+}
+
+.button-design{
+    @include size(18px, 32px, 0.2px);
+    color: $colorPurple;
+    border: 1px solid $colorGray;
+    background: $colorWhite;
+    display: inline-block;
+    transition: .3s ease;
+    @include widthHeight(146px, 48px);
+    margin-top: 16px;
+    @include atriTypeBold;
+
+    &:hover{
+        cursor: pointer;
+        background: $colorPurple;
+        border: none;
+        color: $colorWhite;    
+    }
+}
+
+.button-card{
+    border-radius: 16px;
+    @include widthHeight(100%, 64px);
+}
+.button-card:hover{
+    color: #fff;
+    @include size(24px, 36px, normal);
+}
+
+.button__card{
+    @include widthHeight(90px, 32px);
+    border: 1px solid #6C5CE7;
+    @include size(12px, 15px, 2.5px);
+    text-transform: uppercase;
+    color: $colorBlack;
+    @include atriTypeBold(Inter,800);
+    border-radius: 999px;
+    cursor: pointer;
+}
+
+.button-footer{
+    @include size(24px, 36px, 0.25px);
+    @include widthHeight(100%, 80px);
+    margin-top: 30px;
+    text-shadow: 0px 2px 4px rgb(38 50 56 / 16%), 0px 4px 8px rgb(38 50 56 / 8%);
+    background: $colorPurple;
+
+    &:hover{
+        cursor: pointer;
+        color: $colorBlack;
+        opacity: 0.85;
+    }
+}
+
+
+

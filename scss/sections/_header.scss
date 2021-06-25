@@ -1,0 +1,235 @@
+@import '../colors';
+@import '../setting';
+@import '../components/button';
+
+#header{
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    background-color: #fff;
+    height: 96px;
+}
+
+.navbar{
+    padding-top: 0;
+    padding-bottom: 0;
+
+    &-header{
+        line-height: 96px;
+        margin-left: 135px;
+        &__logo{
+            @include dis-cell;
+        }
+        &__name{
+            @include dis-cell;
+            h1{
+                @include atriTypeBold;
+                @include size(48px, 96px, -1px);
+                color: $colorBlack;
+                margin-bottom: 0;
+            }
+        }
+    }
+    &-list{
+        list-style-type: none;
+        display: flex;
+        margin-bottom: 0;
+        padding-left:0;
+        &__link{
+            color: $colorBlack !important;
+            font-weight: bold;
+        }
+        li{
+            margin-left: 16px;
+            margin-right: 15px;
+        }
+        a{
+            text-decoration: none;
+            @include size(18px, 32px, normal);
+            color: $colorPurple;
+            font-family: Inter;
+
+            &:hover{
+                color: $colorBlack;
+                @include atriTypeBold;
+            }
+        }
+    }
+    &__dot{
+        line-height: 32px;
+        color: $colorYellow;
+        font-size: 18px;
+    }
+
+    &__button{
+        margin-right: 135px;
+        background: $colorPurple;
+    }
+    
+    
+}
+.mobi{
+    display: none;
+}
+
+
+@media screen and (min-width: 1440px) {
+    header{
+        width: auto;
+        margin: auto;
+    }
+    .navbar,
+    main, footer{
+        width: 1440px;
+        margin: auto;
+    }
+    .mobi{
+        display: none;
+    }
+    .navbar-header__logo{
+        display: none;
+    }
+
+    
+}
+
+@media screen and (min-width: 768px) and (max-width: 1440px){
+    .navbar-header__logo i{
+        display: none;
+    }
+    
+
+    .navbar{
+        &-header{
+            margin: 0 45px;
+        }
+        
+    }
+    
+
+
+}
+@media screen and (min-width: 361px) and (max-width: 768px){
+    header,
+    main, footer{
+        min-width: 768px;
+        margin: auto;
+    }
+
+    #header{
+        overflow: hidden;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .navbar{
+        display: block;
+
+        &-header{
+    
+            &__logo img{
+                display: none;
+            }
+
+            &__logo {
+
+                i{
+                    display: block;
+                    @include widthHeight(40px, 40px);
+                    @include size(34px, 18px, 0.2px);
+                    text-align: center;
+                    line-height: 96px;
+                    
+                }
+            }
+            
+        }
+        h1{
+            font-size: 56px;
+        }
+
+        &-list{
+            display: block;
+            padding-left: 126px!important;
+        }
+
+    }
+    .mobi{
+        display: block;
+        margin: 27px 65px;
+    }
+    .desktop{
+        display: none;
+    }
+    .button-header{
+        border-radius: 8px !important;
+        @include size(28px, 32px, 0.2px);
+        margin: 16px 45px;
+        background: $colorPurple;
+    }
+}
+
+@media only screen and (max-width: 360px){
+
+    
+    header,main, footer{
+        max-width: 360px;
+        margin: auto;
+        overflow: hidden;
+    }
+
+    #header{
+        height: 72px;
+        overflow: hidden;
+        display: flex;
+        justify-content: space-between;
+    }
+    .navbar{
+        display: block;
+
+        &-header{
+            line-height: 72px;
+            margin-left: 15px;
+    
+            &__logo img{
+                display: none;
+            }
+
+            i{
+                @include widthHeight(40px, 40px);
+                text-align: center;
+            }
+        }
+        &-list{
+            display: block;
+            
+            a{
+                font-size: 15px;
+                margin-left: 15px;
+            }
+        }
+        
+    }
+    
+
+    h1{
+        font-size: 24px !important;
+        line-height: 72px !important;
+        letter-spacing: 0.25px !important;
+    }
+    .button-header{
+        @include widthHeight(128px !important, 40px !important);
+        border-radius: 8px !important;
+        @include size(18px, 32px, 0.2px);
+        margin: 16px;
+        background: $colorPurple;
+    }
+
+    .desktop{
+        display: none;
+    }
+
+    .mobi{
+        display: block;
+        
+    }
+
+}
