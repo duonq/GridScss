@@ -1,4 +1,4 @@
-@import '../colors';
+@import '../variable';
 
 input{
     width: 270px;
@@ -9,6 +9,7 @@ input{
     border: none;
     outline: none;
     border-radius: 16px;
+    border: 2px solid #f0f0f0;
     background: #f0f0f0;
 
     &:hover{
@@ -16,3 +17,8 @@ input{
     }
 }
 
+@include responsive_768{
+    input{
+        width: 100%;
+    }
+}

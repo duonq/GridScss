@@ -1,26 +1,8 @@
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap");
-
-
-html{
-    font-family: Inter;
-}
-
-header,main,footer{
-    width: 1440px;
-    margin: auto;
-}
-
-// main{
-//     background:  rgba(0, 0, 0, 0.2);
-// }
-@import 'setting';
-@import 'sections/header';
-@import 'sections/slide';
-@import 'sections/design';
-@import 'sections/card';
-@import 'sections/footer';
+@import 'normal';
+@import 'variable';
+@import 'secs/title';
+@import 'secs/header';
+@import 'secs/slides';
+@import 'secs/suport';
+@import 'secs/cards';
+@import 'secs/footer';

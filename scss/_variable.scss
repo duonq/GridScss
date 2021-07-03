@@ -1,0 +1,130 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap");
+
+html{
+    font-family: Inter;
+    overflow-x: hidden;
+}
+
+
+.td__inner--width{
+    max-width: 1170px;
+    margin: auto;
+}
+
+
+//color
+$colorBlack: #2D3436;
+$colorPurple: #6C5CE7;
+$colorYellow: #FDCB6E;
+$colorRed: #D63031;
+$colorRedLight: #FF7675;
+$colorGreenLight: #55efc4;
+$colorWhite: #fff;
+$colorPink: #E84393;
+$colorGray: #ADADAD;
+$colorGrayLight: #C2C2C2;
+$colorBlue: #0984E3;
+$colorGreen: #00B894;
+
+
+$text-shadow--white: 0 4px 0px #ffff;
+$text-shadow--black: 0 4px 0px #000;
+
+.bg-redlight{
+    background: $colorRedLight;
+}
+.bg-Green{
+    background: $colorGreen;
+}
+.bg-pink{
+    background: $colorPink;
+}
+.bg-bluelight{
+    background-color: #74B9FF;
+}
+
+
+
+//mixin
+@mixin dis-cell{
+    display: table-cell;
+    vertical-align: top;
+}
+
+@mixin d-flex {
+    display: flex;
+    justify-content: space-between;
+}
+@mixin atriTypeBold($fontFamily: Inter, $fontWeight: bold) {
+    font-family: $fontFamily;
+    font-weight: $fontWeight;
+}
+@mixin size($font-size, $line-height, $leter-spacing) {
+    font-size: $font-size;
+    line-height: $line-height;
+    letter-spacing: $leter-spacing;
+}
+@mixin td__inner {
+    max-width: 1170px;
+    margin: 0px auto;
+    padding-top: 80px;
+    padding-bottom: 80px;
+}
+@mixin positon-abs($top, $bottom, $left, $right) {
+    top: $top;
+    left: $left;
+    right: $right;
+    bottom: $bottom;
+    z-index: -99;
+}
+@mixin widthHeight($width, $height) {
+    width: $width;
+    height: $height;
+}
+
+
+//zoom
+.zoom{
+    overflow: hidden;
+    display: block;
+}
+.zoom img{
+    transition: .3s ease;
+    &:hover{
+        cursor: pointer;
+        transform: scale(1.3);
+    }
+}
+
+
+//respon
+$res_359 : "only screen and (max-width: 360px)";
+$res_360 : "only screen and (min-width: 361px) and (max-width: 767px)";
+$res_768 : "only screen and (min-width: 768px) and (max-width: 1023px)";
+$res_1024 : "only screen and (min-width: 1024px) and (max-width: 1170px)";
+
+@mixin responsive_359() {
+    @media #{$res_359} {
+        @content;
+    }
+}
+@mixin responsive_360() {
+    @media #{$res_360} {
+        @content;
+    }
+}
+@mixin responsive_768() {
+    @media #{$res_768} {
+        @content;
+    }
+}
+@mixin responsive_1024() {
+    @media #{$res_1024} {
+        @content;
+    }
+}

@@ -1,0 +1,533 @@
+@import '../normal';
+@import '../variable';
+
+.slide{
+    &-images{
+        @extend .td__inner--width;
+        @include d-flex;
+        margin-top: 64px !important;
+        // &-left{
+            // width: calc(100%/3);
+        // }
+    
+        &__title{
+            @include atriTypeBold(Inter, 400);
+            @include size(18px, 32px, normal);
+        }
+        &--pos{
+            width: 100%;
+            margin-top: 16px;
+            top: 0;
+            
+    
+            p{
+                @include size(18px, 32px, 0.2px);
+                @include atriTypeBold(Inter, 700);
+                color: $colorWhite;
+                margin-top: 32px
+            }
+            span{
+                @include size(14px, 24px, 0.25px);
+                @include atriTypeBold(Inter, 400);
+            }
+        }
+        &-right{
+            padding-left: 30px;
+            // width: calc(100% - 100%/3 - 30px);
+            
+            &--pos{
+                width: 100%;
+                margin-bottom: 16px;
+                bottom: 0;
+            }
+    
+            &__title{
+                @include size(48px, 56px, -1px);
+                text-shadow: $text-shadow--black;
+                @include atriTypeBold;
+                color:  $colorWhite;
+                text-align: center;
+            }
+        }
+        &-on{
+            @include d-flex;
+        }
+        &__text{
+            
+            padding-left: 30px;
+            padding-top: 80px;
+    
+            &-pair{
+                @include size(18px, 32px, normal);
+                @include atriTypeBold(Inter, normal);
+                margin-bottom: 0;
+                @include widthHeight(370px, 78px);
+                // height: 78px !important;
+            }
+        }
+    
+        &__under{
+            @include d-flex;
+            margin-top: 30px;
+            
+        }
+    
+        &--pos-woman{
+            width: 100%;
+            margin-top: 16px;
+            top: 0;
+            padding-top: 30px
+        }
+    }
+    
+    
+    .image__shoe,.image__textA{
+        @include dis-cell;
+    }
+    .image__frame,.image__woman,.image__shoe{
+    padding-left: 30px;
+    }
+    
+    .icon-arow-mobi{
+    display: none;
+    }
+    .slide-images-mobi{
+        display: none;
+    }
+}
+
+
+@include responsive_1024{
+    #slide{
+        max-width: 1170px;
+        margin: auto;
+        // overflow-x: hidden;
+    }
+}
+@include responsive_768{
+    #slide{
+        max-width: 1023px !important;
+        overflow-x: hidden;
+    }
+    .slide-images{
+        display: none;
+        max-width: 1023px !important;
+
+        &-left{
+            @include dis-cell;
+            width: auto;
+           padding-top: 64px;
+        }
+        &-right{
+            @include dis-cell;
+            width: auto;
+        }
+    }
+    .slide-images-mobi{
+        @include td__inner;
+        display: block !important;
+        margin: auto;
+        text-align: -webkit-center;
+        img{
+            float: left;
+        }
+    }
+    .type{
+        @include atriTypeBold;
+        text-align: center;
+        padding-top: 18px;
+    }
+
+    .image__vase{
+        margin-top: 20px;
+        float: right
+    }
+    .positon-abs-slip{
+        @include positon-abs(0, 0, 0, 0);
+        z-index: 1;
+        color: $colorWhite;
+
+        p{
+            @include size(12px, 14px, 0.2px);
+            @extend .type;
+        }
+        span{
+            font-weight: normal;
+            @include size(12px, 14px, 0.2px);
+        }
+    }
+    .positon-abs-vase{
+        bottom: 0;
+        margin-bottom: 20px;
+        p{
+            @include size(14px, 14px, 0.2px);
+            @extend .type;
+            width: 82px;
+        }
+    }
+
+    .positon-abs-man{
+        top: 0;
+        z-index: 1;
+        p{
+            @extend .type;
+            width: 224px;
+            @include size(23px, 31px, 0.2px);
+            color: $colorWhite;
+            margin-top: -10px;
+        }
+    }
+
+    .image__clock{
+        margin-top: 76px;
+        margin-left: 20px;
+    }
+    .positon-abs-clock{
+        top: 0;
+        p{
+            @extend .type;
+            width: 84px;
+            color: $colorBlack;
+            @include size(9px, 14px, 0.2px);
+        }
+    }
+
+    .image-under{
+        margin-top: 30px;
+    }
+    .positon-abs-flower{
+        bottom: 0;
+        p{
+            width: 130px;
+            @extend .type;
+            @include size(13px, 14px, 0.2px);
+            margin-bottom: 18px;
+            font-weight: normal;
+        }
+    }
+    .image__math{
+        margin-top: 20px;
+    }
+    .positon-abs-math{
+        bottom: 0;
+        p{
+            @extend .type;
+            @include size(25px, 26px, -1px);
+            width: 130px;
+            margin-bottom: 18px;
+        }
+    }
+    .rainbow{
+        margin-left: 20px;
+    }
+    .positon-abs-rainbow{
+        bottom: 51px;
+        p{
+            width: 179px;
+            @extend .type;
+            @include size(25px, 27px, -1px);
+            color: #fff;
+            text-shadow: 0px 12px 12px rgba(28, 65, 84, 0.1), 0px 24px 24px rgba(28, 65, 84, 0.08), 0px 64px 48px rgba(28, 65, 84, 0.08), 0px 64px 64px rgba(28, 65, 84, 0.04);
+        }
+    }
+    .positon-abs-rain{
+        bottom: 0;
+        p{
+            width: 179px;
+            @extend .type; 
+            @include size(10px, 22px, 0.2px);
+            margin-bottom: 10px;
+        }
+    }
+    
+}
+
+@include responsive_360{
+    .td__inner--width{
+        max-width: 320px !important;
+    }
+    .slide-images{
+        display: none !important;
+
+        &-left{
+            @include dis-cell;
+            width: auto;
+           padding-top: 64px;
+        }
+        &-right{
+            @include dis-cell;
+            width: auto;
+        }
+    }
+    .slide-images-mobi{
+        padding: 40px 0;
+        display: block !important;
+        margin: auto;
+        text-align: -webkit-center;
+        img{
+            float: left;
+        }
+    }
+    .type1{
+        @include atriTypeBold;
+        text-align: center;
+        padding-top: 8px;
+    }
+
+    .image__vase{
+        margin-top: 20px;
+        float: right
+    }
+    .positon-abs-slip{
+        @include positon-abs(0, 0, 0, 0);
+        z-index: 1;
+        color: $colorWhite;
+
+        p{
+            @include size(12px, 14px, 0.2px);
+            @extend .type1;
+        }
+        span{
+            font-weight: normal;
+            @include size(12px, 14px, 0.2px);
+        }
+    }
+    .positon-abs-vase{
+        bottom: 0;
+        margin-bottom: 20px;
+        p{
+            @include size(14px, 14px, 0.2px);
+            @extend .type1;
+            width: 82px;
+        }
+    }
+
+    .positon-abs-man{
+        top: 0;
+        z-index: 1;
+        p{
+            @extend .type1;
+            width: 224px;
+            @include size(23px, 31px, 0.2px);
+            color: $colorWhite;
+            margin-top: -10px;
+        }
+    }
+
+    .image__clock{
+        margin-top: 76px;
+        margin-left: 20px;
+    }
+    .positon-abs-clock{
+        top: 0;
+        p{
+            @extend .type1;
+            width: 84px;
+            color: $colorBlack;
+            @include size(9px, 14px, 0.2px);
+        }
+    }
+
+    .image-under{
+        margin-top: 30px;
+    }
+    .positon-abs-flower{
+        bottom: 0;
+        p{
+            width: 130px;
+            @extend .type1;
+            @include size(13px, 14px, 0.2px);
+            margin-bottom: 18px;
+            font-weight: normal;
+        }
+    }
+    .image__math{
+        margin-top: 20px;
+    }
+    .positon-abs-math{
+        bottom: 0;
+        p{
+            @extend .type1;
+            @include size(25px, 26px, -1px);
+            width: 130px;
+            margin-bottom: 18px;
+        }
+    }
+    .rainbow{
+        margin-left: 20px;
+    }
+    .positon-abs-rainbow{
+        bottom: 51px;
+        p{
+            width: 179px;
+            @extend .type1;
+            @include size(25px, 27px, -1px);
+            color: #fff;
+            text-shadow: 0px 12px 12px rgba(28, 65, 84, 0.1), 0px 24px 24px rgba(28, 65, 84, 0.08), 0px 64px 48px rgba(28, 65, 84, 0.08), 0px 64px 64px rgba(28, 65, 84, 0.04);
+        }
+    }
+    .positon-abs-rain{
+        bottom: 0;
+        p{
+            width: 179px;
+            @extend .type1; 
+            @include size(10px, 22px, 0.2px);
+            margin-bottom: 10px;
+        }
+    }
+}
+@include responsive_359{
+    .td__inner--width{
+        max-width: 359px !important;
+    }
+    .slide-images{
+        display: none !important;
+
+        &-left{
+            @include dis-cell;
+            width: auto;
+            padding-top: 64px;
+            
+        }
+        &-right{
+            padding-left: 0;
+            padding-left: 15px;
+            @include dis-cell;
+            width: auto;
+        }
+    }
+    .slide-images-right{
+        margin-left: -15px;
+    }
+    #slides-mobi{
+        margin-left: -76px;
+    }
+    .slide-images-mobi{
+        padding: 40px 0;
+        display: block !important;
+        margin: auto;
+        text-align: -webkit-center;
+        img{
+            float: left;
+        }
+    }
+    .type2{
+        @include atriTypeBold;
+        text-align: center;
+        padding-top: 8px;
+    }
+
+    .image__vase{
+        margin-top: 20px;
+        float: right;
+    }
+    .positon-abs-slip{
+        @include positon-abs(0, 0, 0, 0);
+        z-index: 1;
+        color: $colorWhite;
+
+        p{
+            @include size(10px, 14px, 0.2px);
+            @extend .type2;
+            width: 130px;
+        }
+        span{
+            font-weight: normal;
+            @include size(9px, 14px, 0.2px);
+        }
+    }
+    .positon-abs-vase{
+        bottom: 0;
+        margin-bottom: 8px;
+        p{
+            @include size(9px, 14px, 0.2px);
+            @extend .type2;
+            width: 82px;
+        }
+    }
+
+    .positon-abs-man{
+        top: 0;
+        z-index: 1;
+        p{
+            @extend .type2;
+            width: 224px;
+            @include size(23px, 31px, 0.2px);
+            color: $colorWhite;
+            margin-top: -10px;
+        }
+    }
+
+    .image__clock{
+        margin-top: 76px;
+        margin-left: 15px;
+    }
+    .positon-abs-clock{
+        top: 0;
+        p{
+            @extend .type2;
+            width: 84px;
+            color: $colorBlack;
+            @include size(9px, 14px, 0.2px);
+        }
+    }
+
+    .image-under{
+        margin-top: 20px;
+    }
+    .positon-abs-flower{
+        bottom: 0;
+        p{
+            width: 130px;
+            @extend .type2;
+            @include size(13px, 14px, 0.2px);
+            margin-bottom: 18px;
+            font-weight: normal;
+        }
+    }
+    .image__math{
+        margin-top: 20px;
+    }
+    .positon-abs-math{
+        bottom: 0;
+        p{
+            @extend .type2;
+            @include size(25px, 26px, -1px);
+            width: 130px;
+            margin-bottom: 18px;
+        }
+    }
+    .rainbow{
+        margin-left: 15px;
+    }
+    .positon-abs-rainbow{
+        bottom: 51px;
+        p{
+            width: 179px;
+            @extend .type2;
+            @include size(25px, 27px, -1px);
+            color: #fff;
+            text-shadow: 0px 12px 12px rgba(28, 65, 84, 0.1), 0px 24px 24px rgba(28, 65, 84, 0.08), 0px 64px 48px rgba(28, 65, 84, 0.08), 0px 64px 64px rgba(28, 65, 84, 0.04);
+        }
+    }
+    .positon-abs-rain{
+        bottom: 0;
+        p{
+            width: 179px;
+            @extend .type2; 
+            @include size(10px, 22px, 0.2px);
+            margin-bottom: 10px;
+        }
+    }
+    .rainbow{
+        button{
+            margin-left: -35px;
+        }
+        .button-suport{
+            @include widthHeight(130px, 37px);
+            font-size: 14px;
+            background-color: $colorPurple;
+            color: $colorWhite;
+        }
+    }
+}

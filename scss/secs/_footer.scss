@@ -1,9 +1,23 @@
-@import '../colors';
-@import '../components/button';
+
+@import '../normal';
+@import '../variable';
+@import '../components/buttom';
 @import '../components/input';
 
+#footer-mobi{
+    display: none;
+}
+footer{
+    img{
+        max-width: 100%;
+        height: auto;
+    }
+}
+
 .footer{
+    // overflow-x: hidden;
     @include td__inner;
+    max-width: 1170px !important;
 }
 .follow{
     &__name{
@@ -74,82 +88,81 @@ textarea {
 }
 
 
-
-
-@media screen and (min-width: 768px) and (max-width: 1440px){
-    #footer-mobi{
-        display: none;
-    }
-}
-
-@media screen and (min-width: 1440px){
-    #footer-mobi{
-        display: none;
-    }
-}
-
-@media screen and (min-width: 361px) and (max-width: 768px){
-    .footer{
+@include responsive_1024{
+    #footer{
+        max-width: 1170px;
         margin: auto;
-        padding: 0;
     }
-    .col-md-6{
-        width: 100%;
-        text-align: center;
+    .suports__title{
+        margin: 30px;
     }
-    .d-flex{
-        justify-content: center;
+    .suports__icon{
+        margin: 40px 30px;
     }
-
+    input,
+    textarea, 
     .inputWidthIcon--mess,
     .inputWidthIcon{
-        margin: 20px auto;
-        width: 670px;
+        width: 100%;
     }
+
     
-    input{
-        width: 100% !important;
-        padding: 18px 66px 18px 18px;
+}
+@include responsive_768{
+    #footer-mobi{
+        display: none;
     }
-    .positon-abs{
-        line-height: 68px;
+    .footer{
+        padding-top: 0;
+        padding-bottom: 0;
+        max-width: 1023px !important;
     }
+    .follow{
+        &__name{
+            text-align: center;
+        }
+        &__icon{
+            justify-content: center;
+        }
+        &__list-colum ul{
+            text-align: center;
+        }
+        &__email{
+            text-align: center;
+        }
 
-    textarea{
-        min-height: 120px;
-    }
-    .button-footer{
-        width: 670px;
-    }
-
-    .follow__list-colum{
-        .row{
-            width: 60%;
-            margin: auto;
-
-            .col-md-4{
-                width: calc(100%/3) !important;
-                margin: auto;
+        &__form{
+            margin-top: 40px;
+            .row{
+                flex-flow: column;
+                margin: 10px auto;
+                .col-md-6, .col-md-8, .col-md-4{
+                    width: 100%;
+                    padding-right: 0;
+                    padding-left: 0;
+                }
+                
             }
         }
     }
-    #footer-mobi{
-        display: none;
+    .inputWidthIcon, .inputWidthIcon--mess, textarea {
+        width: 100%;
     }
-
+    .inputWidthIcon--mess{
+        margin-top: 16px;
+    }
 }
+@include responsive_360{
 
-
-@media screen and (max-width: 360px){
-    
     #footer{
         display: none;
     }
-
+    
     #footer-mobi{
         display: block;
         padding-top: 40px;
         padding-bottom: 40px;
+        margin: auto;
     }
 
     .footer-mobi{
@@ -178,9 +191,60 @@ textarea {
         &__follow-icon{
             margin: 0 15px;
             margin-top: 24px;
-            display: flex;
-            justify-content: space-between;
+            @include d-flex;
+            div{
+                @include widthHeight(40px, 40px);
+            }
+        }
+    }
 
+    .bg-rectangle, .bg-dots {
+        bottom: 0;
+    }
+    .bg-dots{
+        margin-left: 55px;
+    }
+}
+
+@include responsive_359{
+    #footer{
+        display: none;
+    }
+    
+    #footer-mobi{
+        display: block;
+        padding-top: 40px;
+        padding-bottom: 40px;
+        margin: auto;
+    }
+
+    .footer-mobi{
+        &__title{
+            text-align: center;
+            @include size(14px, 24px, 0.2px);
+            @include atriTypeBold(Inter, 500);
+            margin-bottom: 0;
+    
+            &--color{
+                color: $colorGreen;
+                text-align: center;
+                @include size(12px, 22px, 0.3px);
+                margin-bottom: 0;
+            }
+    
+            &-email{
+                @include size(18px, 32px, 0.2px);
+                text-align: center;
+                color: $colorPurple;
+                @include atriTypeBold;
+                margin-bottom: 0;
+            }
+        }
+
+        &__follow-icon{
+            margin: 0 15px;
+            margin-top: 24px;
+            @include d-flex;
             div{
                 @include widthHeight(40px, 40px);
             }

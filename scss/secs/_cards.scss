@@ -1,0 +1,366 @@
+@import '../normal';
+@import '../variable';
+@import '../secs/title';
+
+
+.desktop-card{
+    @extend .td__inner--width;
+    width: 1170px !important;
+
+    .col-md-4:first-child{
+        .card{
+            .card-body{
+                .card__body-checktick{
+                    &--pack{
+                        .checktick__icon{
+                            background: $colorGray;
+                        }
+                    }
+                    
+                }
+                
+            }
+            
+        }
+    }
+
+    .col-md-4:nth-child(2){
+        .card{
+            box-shadow: 0 5px 8px rgb(0 0 0 / 20%);
+            border-radius: 16px;
+            .card-body{
+                .card__body-checktick{
+                    &--pack{
+                        .checktick__icon{
+                            background: $colorYellow;
+                        }
+                    }
+                    
+                }
+                
+            }
+            
+        }
+    }
+
+    .col-md-4:last-child{
+        .card{
+            .card-body{
+                .card__body-checktick{
+                    &--pack{
+                        .checktick__icon{
+                            background: $colorGreenLight;
+                        }
+                    }
+                    
+                }
+                
+            }
+            
+        }
+    }
+}
+#card{
+    @include td__inner;
+}
+.card{
+    border: none;
+    padding: 32px;
+    transition: .3s ease;
+    height: 100%;
+
+    &:hover{
+        border-radius: 16px;
+        box-shadow: 0 5px 8px rgb(0 0 0 / 20%);
+    }
+
+    &__title-color-blue{
+        @include size(18px, 32px, 0.2px);
+        color: $colorPurple;
+        margin-bottom: 0;
+    }
+
+    &__body-checktick--pack{
+        margin-top: 24px;
+        display: flex;
+    }
+}
+.card-body{
+    width: 306px;
+    flex: auto;
+    padding: 0;
+    &__name{
+        @include atriTypeBold;
+        @include size(48px, 96px, -1px);
+        color: $colorBlack;
+    }
+    span{
+        @include size(12px, 15px, 2.5px);
+        text-transform: uppercase;
+    }
+}
+
+.checktick__icon{
+    @include widthHeight(32px, 32px);
+    border-radius: 50%;
+    margin-right: 16px;
+    text-align: center;
+
+    i{
+        font-size: 12px;
+    }
+}
+
+.checktick__text{
+    @include size(18px, 32px, normal);
+    @include atriTypeBold(Inter, 400);
+    color: $colorBlack;
+}
+
+.td__pos--card{
+    z-index: -99;
+    left: -26px;
+    top: 86%;
+}
+
+.mobi-card{
+    display: none;
+}
+
+
+@include responsive_1024{
+    #card{
+        max-width: 1169px;
+        margin: auto;
+    }
+    .card{
+        padding: 15px;
+        &-body{
+            width: 100%;
+        }
+    }
+
+}
+@include responsive_768{
+    #card{
+        max-width: 768px !important;
+        margin: auto;
+    }
+    .desktop-card{
+        display: none;
+    }
+    .mobi-card{
+        display: block;
+        .col-md-4:last-child{
+            .card{
+                background: $colorPurple;
+                .card__title-color-blue{
+                    color: $colorGreenLight;
+                }
+                .button__card{
+                    background-color: $colorPurple;
+                    color: $colorGreenLight;
+                    border: 1px $colorGreenLight solid;
+                }
+                &-body__name{
+                    color: $colorWhite;
+                    text-shadow: 0px 4px 0px #000000;
+                }
+                .checktick__icon{
+                    background: $colorBlack;
+                    
+                    i{
+                        color: $colorWhite;
+                    }
+                }
+                .checktick__text{
+                    color: $colorWhite;
+                }
+            }
+            
+        }
+    }
+    .card{
+        border-radius: 16px;
+        box-shadow: 0 5px 8px rgb(0 0 0 / 20%);
+        padding: 70px;
+        &__title-color-blue{
+            @include atriTypeBold(Inter, 700);
+            color: $colorBlack;
+        }
+    }
+    .row{
+        .col-md-4{
+            width: 80%;
+            margin: auto;
+            margin-bottom: 40px;
+        }
+    }
+    .card-body{
+        width: 100%;
+        &__name{
+            color: $colorPurple;
+        }
+        .checktick__icon{
+            background: $colorYellow;
+        }
+    }
+    .follow__icon a{
+        margin-right: 20px;
+    }
+}
+@include responsive_360{
+    #card{
+        max-width: 767px;
+        margin: auto;
+        padding-top: 0 !important;
+        padding-bottom: 0 !important;
+    }
+    .desktop-card{
+        display: none;
+    }
+    .mobi-card{
+        display: block;
+    }
+    .card{
+        box-shadow: 0 5px 8px rgb(0 0 0 / 20%);
+        border-radius: 16px;
+    }
+    .row{
+        .col-md-4{
+            width: 90%;
+            margin: auto;
+            margin-bottom: 40px;
+            &:last-child{
+                .card{
+                    background-color: $colorPurple;
+                    padding: 30px;
+                    &-body{
+                        .button__card{
+                            background-color: $colorPurple;
+                            border: 1px solid $colorGreenLight;
+                            color: $colorGreenLight;
+                        }
+                        &__name{
+                            color: #fff;
+                            text-shadow: 0px 4px 0px #000000;
+                        }
+                    }
+                    &__title-color-blue{
+                        @include atriTypeBold(Inter, 700);
+                        color: $colorGreenLight;
+                    }
+                    .checktick__icon{
+                        background: $colorBlack;
+                        i{
+                            color:  #fff;
+                        }
+                    }
+                    .checktick__text{
+                        color:  #fff;
+                    }
+
+                    .button-suport{
+                        background: $colorWhite !important;
+                        color: $colorPurple !important;
+                        &:hover{
+                            background-color: $colorPurple !important;
+                            color: $colorWhite !important;
+                            border: 1px $colorWhite solid !important;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .card-body{
+        width: 100%;
+        margin-bottom: 30px;
+        .card__title-color-blue{
+            @include atriTypeBold(Inter, 700);
+            color: $colorBlack;
+        }
+        .checktick__icon{
+            background-color: $colorYellow;
+        }
+    }
+    
+}
+
+@include responsive_359{
+    #card{
+        max-width: 360px;
+        margin: auto;
+        padding-top: 0 !important;
+        padding-bottom: 0 !important;
+    }
+    .desktop-card{
+        display: none;
+    }
+    .mobi-card{
+        display: block;
+        padding: 30px 0;
+    }
+    .card{
+        box-shadow: 0 5px 8px rgb(0 0 0 / 20%);
+        border-radius: 16px;
+    }
+    .row{
+        .col-md-4{
+            width: 90%;
+            margin: auto;
+            margin-bottom: 40px;
+            &:last-child{
+                .card{
+                    background-color: $colorPurple;
+                    padding: 30px;
+                    &-body{
+                        .button__card{
+                            background-color: $colorPurple;
+                            border: 1px solid $colorGreenLight;
+                            color: $colorGreenLight;
+                        }
+                        &__name{
+                            color: #fff;
+                            text-shadow: 0px 4px 0px #000000;
+                        }
+                    }
+                    &__title-color-blue{
+                        @include atriTypeBold(Inter, 700);
+                        color: $colorGreenLight;
+                    }
+                    .checktick__icon{
+                        background: $colorBlack;
+                        i{
+                            color:  #fff;
+                        }
+                    }
+                    .checktick__text{
+                        color:  #fff;
+                    }
+
+                    .button-suport{
+                        background: $colorWhite !important;
+                        color: $colorPurple !important;
+                        &:hover{
+                            background-color: $colorPurple !important;
+                            color: $colorWhite !important;
+                            border: 1px $colorWhite solid !important;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .card-body{
+        width: 100%;
+        margin-bottom: 30px;
+        .card__title-color-blue{
+            @include atriTypeBold(Inter, 700);
+            color: $colorBlack;
+        }
+        .checktick__icon{
+            background-color: $colorYellow;
+        }
+    }
+}

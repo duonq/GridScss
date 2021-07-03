@@ -1,0 +1,144 @@
+@import '../normal';
+@import '../variable';
+
+
+.suports{
+    &__icon{
+        margin-top: 40px;
+        
+        &-text{
+            @include atriTypeBold;
+            margin-top: 24px;
+            @include size(24px, auto, 0.25px);
+            color: #2D3436;
+        }
+        &-textabout{
+            @include atriTypeBold(Inter, 400);
+            @include size(18px, 32px, normal);
+        }
+    }
+    &-mobi{
+        display: none;
+    }
+    &-card{
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+    }
+    &-content{
+        height: 100%;
+    }
+}
+.image__call{
+    @include widthHeight(70px, 70px);
+    border-radius: 999px;
+    line-height: 70px;
+    background: $colorPink;
+    text-align: center;
+}
+.image__pie{
+    background: $colorBlue;
+}
+.image__zap{
+    background: $colorPurple;
+}
+.image__thumb{
+    background: $colorGreen;
+}
+
+
+@include responsive_1024{
+    
+}
+@include responsive_768{
+
+    .suports-desktop{
+        display: none;
+    }
+    .suports-mobi{
+        display: block;
+    }
+    .row{
+        margin: 40px auto;
+    }
+    .image-icon{
+        @include widthHeight(53px, 53px);
+        text-align: center;
+        border-radius: 12px;
+    }
+    .suports__icon-textabout{
+        text-align: justify;
+    }
+
+    .row .col-md-6{
+        padding-left: 0;
+        padding-right: 0;
+        padding-right: 30px;
+    }
+    #suports{
+        img{
+            margin: 5px auto;
+        }
+    }
+    
+}
+@include responsive_360{
+    .suports-desktop{
+        display: none;
+    }
+    .suports-mobi{
+        display: block;
+    }
+    .row{
+        margin: 40px auto;
+    }
+    .image-icon{
+        @include widthHeight(53px, 53px);
+        text-align: center;
+        border-radius: 12px;
+    }
+    .suports__icon-textabout{
+        text-align: justify;
+    }
+
+    .row .col-md-6{
+        max-width: 50%;
+        padding-left: 0;
+        padding-right: 20px;
+        height: auto;
+
+    }
+    #suports{
+        img{
+            margin: 5px auto;
+        }
+    }
+}
+@include responsive_359{
+    .suports-desktop{
+        display: none;
+    }
+    .suports-mobi{
+        display: block;
+        .col-md-6{
+            margin: 30px 0;
+            
+        }
+    }
+    
+    .image-icon{
+        @include widthHeight(53px, 53px);
+        text-align: center;
+        border-radius: 12px;
+    }
+    .suports__icon-textabout{
+        text-align: justify;
+    }
+
+    #suports{
+        img{
+            margin: 5px auto;
+        }
+    }
+}

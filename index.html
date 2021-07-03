@@ -6,30 +6,24 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Inter&display=swap" rel="stylesheet">
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@800&display=swap" rel="stylesheet">
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="scss/css/style.css">
-    <title>Document</title>
+    <title>duonq/grid/desktopmobi</title>
 </head>
 
 <body>
     <header id="header" class="header">
 
-        <nav id="nav" class="navbar">
-            <div class="navbar-header">
-                <div class="navbar-header__logo">
+        <div class="header-flex">
+            <div class="d-flex logo">
+                <div class="header__logo">
                     <img src="img/icon-layout.png" alt="">
                 </div>
                 <div id="menu-mobi" class="navbar-header__logo">
                     <i class="fa fa-bars"></i>
                 </div>
 
-                <div class="navbar-header__name">
+                <div class="header__name">
                     <h1>Grid</h1>
                 </div>
             </div>
@@ -43,11 +37,8 @@
                 <li><a href="#">Contact us</a></li>
             </ul>
 
-
-            <button class="navbar__button button button-header desktop">Sign In</button>
-
-        </nav>
-        <button class="button button-header mobi">Sign In</button>
+            <button class="button button-header desktop">Sign In</button>
+        </div>
 
     </header>
 
@@ -57,22 +48,23 @@
             <div class="slide__title position-relative">
                 <p class="slide__title--size-big">Combine
                     <span class="slide__title--color-red">
-                        <span class="text-fine">fine</span>
-                        <span class="text-cool">cool</span>
-                    </span><span> images</span>
+                        <span class="position-relative">
+                            <span class="text-fine">fine</span>
+                            <span class="text-cool">cool</span>
+                            <span class="bg_green"></span>
+                        </span>
+                    </span><span class="text-image"> images</span>
                 </p>
                 <p class="slide__title--size-m">To represent a product</p>
                 <p class="slide__title-mobi">To create any grid by scaling and resizing</p>
 
-                <div class="position-absolute slide__title-pos">
-                    <p class="slide__image--green"></p>
-                </div>
+
             </div>
 
 
-            <div class="icon-arow-mobi">
-                <i class="fa fa-arrow-down"></i>
-            </div>
+            <!-- <div class="icon-arow-mobi">
+                    <i class="fa fa-arrow-down"></i>
+                </div> -->
 
 
             <div class="slide-images">
@@ -168,11 +160,11 @@
                     </div>
                 </div>
 
-
             </div>
 
 
-            <div class="slide-images-mobi">
+            <div id="slides-mobi" class="slide-images-mobi">
+
                 <div class="slide-images-left">
                     <div class="position-relative image__slip">
                         <div class="zoom">
@@ -181,6 +173,7 @@
 
                         <div class="position-absolute positon-abs-slip">
                             <p>Lipstick for business
+                                <br>
                                 <span> Used by 123 people </span>
                             </p>
                         </div>
@@ -188,7 +181,7 @@
 
                     <div class="position-relative image__vase">
                         <div class="zoom">
-                            <img src="img/vase-purple.png" alt="">
+                            <img src="img/flow-tulip.png" alt="">
                         </div>
                         <div class="position-absolute positon-abs-vase">
                             <p>Flowering</p>
@@ -277,7 +270,7 @@
 
                             </div>
 
-                            <button class="button-design">Learn more</button>
+                            <button class="button button-suport">Learn more</button>
                         </div>
                     </div>
                 </div>
@@ -286,162 +279,184 @@
 
         </section>
 
-        <section id="designs" class="designs">
-            <div class="designs__title">
-                <p class="designs__title-delivering">
-                    Delivering good designs <span class="designs__title-color">since 1954</span> <span
-                        class="designs-none"> 🚚💨</span>
+        <section id="suports" class="suports">
+            <div class="suports__title">
+                <p class="suports__title-delivering">
+                    Delivering good suports <span class="suports__title-color">since 1954</span> <span
+                        class="suports-none"> 🚚💨</span>
                 </p>
 
-                <p class="designs__title-medium">We’re the first multi-purpose design kit solutions for businesses. We
+                <p class="suports__title-medium">We’re the first multi-purpose suport kit solutions for
+                    businesses.
+                    We
                     help you bridge <br>
                     gaps between your <span> layouts, templates and developers to empower all involved.</span>
                 </p>
             </div>
 
-            <div class="designs__icon">
+            <div class="suports__icon suports-desktop">
                 <div class="row">
                     <div class="col-md-3">
-                        <div class="image__call">
-                            <img src="img/icon-phone-call.png" alt="">
+                        <div class="suports-card">
+                            <div class="suports-content">
+                                <div class="image__call">
+                                    <img src="img/icon-phone-call.png" alt="">
+                                </div>
+
+                                <p class="suports__icon-text">Support</p>
+
+                                <p class="suports__icon-textabout">
+                                    Delivering faster and more
+                                    personalized
+                                    support with shared screens and cool suport systems for Figma
+                                </p>
+
+                            </div>
+                            <button class="button button-suport">Learn more</button>
                         </div>
-
-                        <p class="designs__icon-text">Support</p>
-
-                        <p class="designs__icon-textabout">
-                            Delivering faster and more
-                            personalized
-                            support with shared screens and cool design systems for Figma
-                        </p>
-
-
-                        <button class="button button-design">Learn more</button>
-
                     </div>
                     <div class="col-md-3">
-                        <div class="image__call image__pie">
-                            <img src="img/icon-pie-chart.png" alt="">
+                        <div class="suports-card">
+                            <div class="suports-content">
+                                <div class="image__call image__pie">
+                                    <img src="img/icon-pie-chart.png" alt="">
+                                </div>
+
+                                <p class="suports__icon-text">Sales growth</p>
+
+                                <p class="suports__icon-textabout">
+                                    Identify qualified
+                                    customers with
+                                    easy-to-use live chat messaging and AI-based Sales Bot
+                                </p>
+
+                            </div>
+                            <button class="button button-suport">Learn more</button>
                         </div>
-
-                        <p class="designs__icon-text">Sales growth</p>
-
-                        <p class="designs__icon-textabout">
-                            Identify qualified
-                            customers with
-                            easy-to-use live chat messaging and AI-based Sales Bot
-                        </p>
-
-
-                        <button class="button button-design">Learn more</button>
-
                     </div>
                     <div class="col-md-3">
-                        <div class="image__call image__zap">
-                            <img src="img/icon-zap.png" alt="">
+                        <div class="suports-card">
+                            <div class="suports-content">
+                                <div class="image__call image__zap">
+                                    <img src="img/icon-zap.png" alt="">
+                                </div>
+
+                                <p class="suports__icon-text">Coponents-driven</p>
+
+                                <p class="suports__icon-textabout">
+                                    Delivering faster and more
+                                    personalized
+                                    support with shared screens and cool suport systems for Figma
+                                </p>
+                            </div>
+
+                            <button class="button button-suport">Learn more</button>
                         </div>
-
-                        <p class="designs__icon-text">Coponents-driven</p>
-
-                        <p class="designs__icon-textabout">
-                            Delivering faster and more
-                            personalized
-                            support with shared screens and cool design systems for Figma
-                        </p>
-
-
-                        <button class="button button-design">Learn more</button>
-
                     </div>
                     <div class="col-md-3">
-                        <div class="image__call image__thumb">
-                            <img src="img/icon-thumbs-up.png" alt="">
+                        <div class="suports-card">
+                            <div class="suports-content">
+                                <div class="image__call image__thumb">
+                                    <img src="img/icon-thumbs-up.png" alt="">
+                                </div>
+
+                                <p class="suports__icon-text">Swap the icon</p>
+
+                                <p class="suports__icon-textabout">
+                                    You can toggle to any icon within
+                                    Instances
+                                    and customize outlined stroke to more bolder or lighter
+                                </p>
+                            </div>
+
+                            <button class="button button-suport">Learn more</button>
                         </div>
-
-                        <p class="designs__icon-text">Swap the icon</p>
-
-                        <p class="designs__icon-textabout">
-                            You can toggle to any icon within
-                            Instances
-                            and customize outlined stroke to more bolder or lighter
-                        </p>
-
-
-                        <button class="button button-design">Learn more</button>
-
                     </div>
                 </div>
 
             </div>
-            <div class="design-mobi">
+            <div class="suports-mobi">
                 <div class="row">
                     <div class="col-md-6">
-                        <div class="image__thumbs">
-                            <img src="img/icon-thumbs-up-mobi.png" alt="">
+                        <div class="suports-card">
+                            <div class="suports-content">
+                                <div class="image-icon bg-redlight">
+                                    <img src="img/icon-thumbs-up-mobi.png" alt="">
+                                </div>
+
+                                <p class="suports__icon-text">Swap the icon</p>
+
+                                <p class="suports__icon-textabout">
+                                    You can toggle to any icon within Instances and customize outlined stroke to more
+                                    bolder
+                                    or
+                                    lighter
+                                </p>
+                            </div>
+                            <button class="button button-suport">Learn more</button>
+
                         </div>
-
-                        <p class="designs__icon-text">Swap the icon</p>
-
-                        <p class="designs__icon-textabout">
-                            You can toggle to any icon within Instances and customize outlined stroke to more bolder or
-                            lighter
-                        </p>
-
-
-                        <button class="button-design">Learn more</button>
-
                     </div>
                     <div class="col-md-6">
-                        <div class="image__thumbs image__linkedin">
-                            <img src="img/icon-linkedin-mobi.png" alt="">
+                        <div class="suports-card">
+                            <div class="suports-content">
+                                <div class="image-icon bg-pink">
+                                    <img src="img/icon-linkedin-mobi.png" alt="">
+                                </div>
+
+                                <p class="suports__icon-text">Toggle icons</p>
+
+                                <p class="suports__icon-textabout">
+                                    You can toggle to any icon within Instances and customize outlined stroke to more
+                                    bolder
+                                    or
+                                    lighter
+                                </p>
+                            </div>
+                            <button class="button button-suport">Learn more</button>
+
                         </div>
-
-                        <p class="designs__icon-text">Toggle icons</p>
-
-                        <p class="designs__icon-textabout">
-                            You can toggle to any icon within Instances and customize outlined stroke to more bolder or
-                            lighter
-                        </p>
-
-
-                        <button class="button button-design">Learn more</button>
-
-
-
                     </div>
                 </div>
 
                 <div class="row">
                     <div class="col-md-6">
-                        <div class="image__thumbs image__zap-off">
-                            <img src="img/icon-zap-off.png" alt="">
+                        <div class="suports-card">
+                            <div class="suports-content">
+                                <div class="image-icon bg-Green">
+                                    <img src="img/icon-zap-off.png" alt="">
+                                </div>
+
+                                <p class="suports__icon-text">Detach if need</p>
+
+                                <p class="suports__icon-textabout">
+                                    Detaching the block instance will help you to control the indents and font styles
+                                    more
+                                    precisely
+                                </p>
+                            </div>
+                            <button class="button button-suport">Learn more</button>
+
                         </div>
-
-                        <p class="designs__icon-text">Detach if need</p>
-
-                        <p class="designs__icon-textabout">
-                            Detaching the block instance will help you to control the indents and font styles more
-                            precisely
-                        </p>
-
-
-                        <button class="button button-design">Learn more</button>
-
                     </div>
                     <div class="col-md-6">
-                        <div class="image__thumbs image__briefcase">
-                            <img src="img/icon-briefcase.png" alt="">
+                        <div class="suports-card">
+                            <div class="suports-content">
+                                <div class="image-icon bg-bluelight">
+                                    <img src="img/icon-briefcase.png" alt="">
+                                </div>
+
+                                <p class="suports__icon-text">Replace a title</p>
+
+                                <p class="suports__icon-textabout">
+                                    Detaching the block instance will help you to control the indents and font styles
+                                    more
+                                    precisely
+                                </p>
+                            </div>
+                            <button class="button button-suport">Learn more</button>
+
                         </div>
-
-                        <p class="designs__icon-text">Replace a title</p>
-
-                        <p class="designs__icon-textabout">
-                            Detaching the block instance will help you to control the indents and font styles more
-                            precisely
-                        </p>
-
-
-                        <button class="button button-design">Learn more</button>
-
                     </div>
                 </div>
             </div>
@@ -456,21 +471,27 @@
             </div>
             <div class="position-relative">
                 <p class="card__Title--size-m">
-                    Bill me <span class="text-monthhly">monthly</span> • <span class="text-yearly">yearly</span>
-                </p>
+                    Bill me
+                    <span class="position-relative">
+                        <span class="text-monthhly">monthly
+                            <span class="bg-yellow position-absolute"></span>
+                        </span>
+                    </span>
+                    •
+                    <span class="pos-re-yearly">
+                        <span class="text-yearly">yearly
+                            <span class="bg-yellow-yearly"></span>
+                        </span>
+                    </span>
 
-                <div class="position-absolute postion-abs">
-                    <p class="bg-yellow"></p>
-                </div>
+                </p>
             </div>
 
             <div class="row desktop-card">
                 <div class="col-md-4">
                     <div class="card">
-
-                        <p class="card__title-color-blue">Like a pussy</p>
-
                         <div class="card-body">
+                            <p class="card__title-color-blue">Like a pussy</p>
                             <p class="card-body__name">Free
                                 <span class="">/
                                     forever
@@ -507,22 +528,22 @@
                                         Awesome Feather icons pack
                                     </p>
                                 </div>
+
                             </div>
-
-                            <button class="button-card button-design td_inner-mt132">
-                                Try for free
-                            </button>
                         </div>
-
+                        <button class="button-card button-suport">
+                            Try for free
+                        </button>
                     </div>
                 </div>
                 <div class="col-md-4">
-                    <div class="card card__hidden position-relative">
-                        <div class="d-flex justify-content-between">
-                            <p class="card__title-color-blue">👤 Individual</p>
-                            <button class="button__card">BEST !</button>
-                        </div>
+                    <div class="card">
+
                         <div class="card-body">
+                            <div class="d-flex justify-content-between">
+                                <p class="card__title-color-blue">👤 Individual</p>
+                                <button class="button__card">BEST !</button>
+                            </div>
                             <p class="card-body__name">$24
                                 <span class="">/
                                     month
@@ -577,25 +598,23 @@
                                         Will help to learn Figma
                                     </p>
                                 </div>
+
+
                             </div>
 
-                            <button class="button-card button-design td_inner-mt20">
-                                Regular license
-                            </button>
-
-
                         </div>
+                        <button class="button-card button-suport">
+                            Regular license
+                        </button>
                         <div class="position-absolute td__pos--card">
                             <img src="img/🎨 Wiggle.png" alt="">
                         </div>
                     </div>
                 </div>
                 <div class="col-md-4">
-                    <div class="card card-three">
-
-                        <p class="card__title-color-blue">👥 Corporate</p>
-
+                    <div class="card">
                         <div class="card-body">
+                            <p class="card__title-color-blue">👥 Corporate</p>
                             <p class="card-body__name">$12
                                 <span class="">/
                                     editor
@@ -643,23 +662,23 @@
                                 </div>
                             </div>
 
-                            <button class="button-card button-design td_inner-mt72">
-                                Extended license
-                            </button>
-                        </div>
 
+                        </div>
+                        <button class="button-card button-suport">
+                            Extended license
+                        </button>
                     </div>
                 </div>
             </div>
 
             <div class="row mobi-card">
                 <div class="col-md-4">
-                    <div class="card card__hidden">
-                        <div class="d-flex justify-content-between">
-                            <p class="card__title-color-blue">Individual</p>
-                            <button class="button__card">fine !</button>
-                        </div>
+                    <div class="card">
                         <div class="card-body">
+                            <div class="d-flex justify-content-between">
+                                <p class="card__title-color-blue">Individual</p>
+                                <button class="button__card">fine !</button>
+                            </div>
                             <p class="card-body__name">$8.99
                                 <span class="">/
                                     month
@@ -706,22 +725,22 @@
                                     </p>
                                 </div>
                             </div>
-
-                            <button class="button-card button-design">
-                                Get started!
-                            </button>
-
                         </div>
+                        <button class="button-card button-suport">
+                            Get started!
+                        </button>
+
                     </div>
                 </div>
 
                 <div class="col-md-4">
-                    <div class="card card__hidden">
-                        <div class="d-flex justify-content-between">
-                            <p class="card__title-color-blue">Professional</p>
-                            <button class="button__card">good !</button>
-                        </div>
+                    <div class="card">
+
                         <div class="card-body">
+                            <div class="d-flex justify-content-between">
+                                <p class="card__title-color-blue">Professional</p>
+                                <button class="button__card">good !</button>
+                            </div>
                             <p class="card-body__name">$12.99
                                 <span class="">/
                                     month
@@ -768,22 +787,21 @@
                                     </p>
                                 </div>
                             </div>
-
-                            <button class="button-card button-design">
-                                Select this plan!
-                            </button>
-
                         </div>
+                        <button class="button-card button-suport">
+                            Select this plan!
+                        </button>
                     </div>
                 </div>
 
                 <div class="col-md-4">
-                    <div class="card card__hidden card--color">
-                        <div class="d-flex justify-content-between">
-                            <p class="card__title-color-blue">Enterprise</p>
-                            <button class="button__card">wow !</button>
-                        </div>
+                    <div class="card">
+
                         <div class="card-body">
+                            <div class="d-flex justify-content-between">
+                                <p class="card__title-color-blue">Enterprise</p>
+                                <button class="button__card">wow !</button>
+                            </div>
                             <p class="card-body__name">$32.99
                                 <span class="">/
                                     month
@@ -831,15 +849,13 @@
                                 </div>
                             </div>
 
-                            <button class="button-card button-design">
-                                Start today!
-                            </button>
-
                         </div>
+                        <button class="button-card button-suport">
+                            Start today!
+                        </button>
                     </div>
                 </div>
             </div>
-
         </section>
     </main>
 
@@ -948,7 +964,7 @@
                     </div>
                 </div>
             </div>
-            <div class="footer__bg">
+            <div class="footer__img text-center">
                 <img src="img/Wave.png" alt="">
             </div>
         </section>
@@ -997,6 +1013,8 @@
                 <img src="img/🎨 Dots 1.png" alt="">
             </div>
         </section>
+
+
     </footer>
 
     <script src="js/bootstrap.min.js"></script>

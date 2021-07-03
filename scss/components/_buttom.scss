@@ -1,11 +1,7 @@
-@import '../setting';
-@import '../colors';
+@import '../variable';
 
 .button{
     border-radius: 16px;
-    // letter-spacing: 0.25px;
-    outline: none;
-    border: none;
     transition: .2s ease;
     cursor: pointer;
     color: $colorWhite;
@@ -13,7 +9,7 @@
 }
 
 .button-header{
-
+    margin: auto 0;
     @include size(24px, 36px, normal);
     @include widthHeight(170px, 64px);
     border-radius: 999px;
@@ -38,7 +34,7 @@
     }
 }
 
-.button-design{
+.button-suport{
     @include size(18px, 32px, 0.2px);
     color: $colorPurple;
     border: 1px solid $colorGray;
@@ -93,3 +89,38 @@
 
 
 
+@include responsive_768{
+    .button-header{
+        @include size(19px, 36px, normal);
+        @include widthHeight(128px, 40px);
+        border-radius: 16px;
+    }
+    .button__card{
+        border: 1px solid #858585;
+        background-color: #fff;
+    }
+}
+@include responsive_1024{
+    
+}
+
+@include responsive_360{
+    .button-header{
+        @include widthHeight(128px !important, 40px !important);
+        border-radius: 8px !important;
+        @include size(18px, 32px, 0.2px);
+        margin: 16px;
+        background: $colorPurple;
+    }
+    .button__card{
+        border: 1px solid #858585;
+        background-color: #fff;
+    }
+    #card{
+        .button-suport{
+            background-color: $colorPurple;
+            color: $colorWhite;
+        }
+    }
+    
+}

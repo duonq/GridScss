@@ -1,0 +1,248 @@
+@import '../variable';
+@import '../components/buttom';
+
+#header{
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    background-color: #fff;
+    height: 96px;
+}
+.header{
+    position: fixed;
+    z-index: 99;
+    left: 0;
+    right: 0;
+
+    &-flex{
+        @include d-flex;
+        @extend .td__inner--width;
+    }
+    &__logo{
+        line-height: 96px;
+        display: inline-block;
+    }
+    #menu-mobi{
+        display: none;
+    }
+    &__name{
+        h1{
+            @include atriTypeBold;
+            @include size(48px, 96px, -1px);
+            color: $colorBlack;
+            margin-bottom: 0;
+        }
+    }
+}
+.navbar-list{
+    display: flex;
+    li{
+        line-height: 96px;
+        margin: 0 16px;
+        // display: block;
+
+        a{
+            @include size(18px, 32px, normal);
+            color: $colorPurple;
+            font-family: Inter;
+
+            &:hover{
+                color: $colorBlack;
+                // @include atriTypeBold;
+            }
+        }
+    }
+
+    &__link{
+        color: $colorBlack !important;
+        font-weight: bold;
+    }
+    
+    .navbar__dot{
+        line-height: 32px;
+        color: $colorYellow;
+        font-size: 18px;
+        line-height: 96px;
+    }
+}
+button{
+    background: $colorPurple;
+}
+
+@include responsive_1024{
+    
+    .header{
+        h1{
+            @include size(32px, 96px, -1px);
+        }
+    }
+    #menu-mobi{
+        display: none !important;
+    }
+}
+
+@include responsive_768{
+    .header{
+        h1{
+            @include size(32px, 96px, -1px);
+        }
+        
+    }
+    .navbar-list{
+        li{
+            margin: 0 5px;
+            a {
+                @include size(12px, 32px, normal);
+            }
+        }
+    }
+    #menu-mobi{
+        display: none !important;
+    }
+
+    .td__inner--width{
+        max-width: 768px !important;
+    }
+}
+
+@include responsive_360{
+    #header{
+        height: 72px;
+        overflow: hidden;
+        justify-content: space-between;
+    }
+    .header{
+        &-flex{
+            display: block;
+        }
+        .td__inner--width{
+            max-width: 767px !important;
+        }
+        h1{
+            @include size(28px, 72px, 0.25px);
+        }
+        ul{
+            display: inline-block;
+            li{
+                line-height: 0;
+            }
+        }
+        &__logo {
+            margin-left: 25px;
+            img{
+                display: none;
+            }
+        }
+        
+        #menu-mobi{
+            display: block;
+            cursor: pointer;
+        }
+        i{
+            @include widthHeight(40px, 40px);
+            text-align: center;
+            line-height: 72px;
+            font-size: 18px;
+        }
+
+        button{
+            position: absolute;
+            float: right;
+            right: 0;
+            top: 0 !important;
+            margin-right: 35px;
+        }
+
+        .navbar-list{
+            width: 100%;
+            background-color: $colorPurple;
+            padding: 10px 0;
+            li{
+                margin-left: 35px;
+                transition: .3 ease;
+                padding-left: 10px;
+                &:hover{
+                    cursor: pointer;
+                    border-left: 2px solid rgb(246, 246, 246);
+                }
+            }
+            a{
+                color: $colorWhite;
+                font-size: 12px;
+            }
+            .navbar__dot{
+                line-height: normal;
+                &:hover{
+                    border-left: none;
+                }
+            }
+        }
+    }
+}
+@include responsive_359{
+    #header{
+        height: 72px;
+        overflow: hidden;
+        justify-content: space-between;
+    }
+    .header{
+        &-flex{
+            display: block;
+        }
+        .td__inner--width{
+            max-width: 359px !important;
+        }
+        h1{
+            @include size(28px, 72px, 0.25px);
+        }
+        ul{
+            display: inline-block;
+            li{
+                line-height: 0;
+            }
+        }
+        &__logo {
+            margin: 0 10px;
+            img{
+                display: none;
+            }
+        }
+        
+        #menu-mobi{
+            display: block;
+            cursor: pointer;
+        }
+        i{
+            @include widthHeight(40px, 40px);
+            text-align: center;
+            line-height: 72px;
+            font-size: 18px;
+        }
+
+        button{
+            display: none;
+        }
+
+        .navbar-list{
+            width: 100%;
+            background-color: $colorPurple;
+            padding: 10px 0;
+            li{
+                transition: .3 ease;
+                padding-left: 10px;
+                &:hover{
+                    cursor: pointer;
+                    border-left: 2px solid rgb(246, 246, 246);
+                }
+            }
+            a{
+                color: $colorWhite;
+                font-size: 12px;
+            }
+            .navbar__dot{
+                line-height: normal;
+                &:hover{
+                    border-left: none;
+                }
+            }
+        }
+    }
+}
